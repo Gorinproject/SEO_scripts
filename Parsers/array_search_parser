@@ -1,0 +1,31 @@
+<?php
+$v = array_merge($values2, $values); 
+$items=$v;
+$search = array('biz', 'net');
+
+function choose($item){
+   global $search;
+   for($i=0; $i<count($search); $i++){
+	//	print($i);
+	//	print_r($search[$i]);
+	//	print_r($item);
+	//	print_r('<br>');
+	if (strpos($item,$search[$i]) !== false){
+       
+	#return true;
+	print('</br>'.'<b>Found:</b> '.'</br>');
+	//	print($search[$i]);
+echo $item;
+			}
+		}
+	#return false;
+	}
+
+echo '<h3>Match found:</h3>';
+var_dump(array_filter($items,'choose'));
+
+echo $items;
+echo '<pre>';
+print_r($values);
+
+?>
